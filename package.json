@@ -19,5 +19,8 @@
     "bugs": {
         "url": "https://github.com/brittnc/mindspace/issues"
     },
-    "homepage": "https://github.com/brittnc/mindspace#readme"
+    "homepage": "https://github.com/brittnc/mindspace#readme",
+    "devDependencies": {
+        "concurrently": "^7.0.0"
+    }
 }
