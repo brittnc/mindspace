@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-import Auth from '../../utils/auth';
+import React from "react";
+import { Link } from "react-router-dom";
+import Auth from "../../utils/auth";
 
 const Header = () => {
   const logout = (event) => {
@@ -12,11 +11,11 @@ const Header = () => {
     <header className="align-center">
       <div className="container">
         <Link className="text-dark" to="/">
-          <h1 className="m-0" style={{ fontSize: '2rem' }}>
+          <h1 className="m-0" style={{ fontSize: "2rem" }}>
             MindSpace
           </h1>
         </Link>
-       
+
         <div>
           {Auth.loggedIn() ? (
             <>
