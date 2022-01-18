@@ -22,5 +22,8 @@
     "homepage": "https://github.com/brittnc/mindspace#readme",
     "devDependencies": {
         "concurrently": "^7.0.0"
+    },
+    "dependencies": {
+        "bcrypt": "^5.0.1"
     }
 }
