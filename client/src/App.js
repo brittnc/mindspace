@@ -17,6 +17,9 @@ import Footer from './components/Footer';
 import SymptomJournal from './container/SymptomJournal';
 
 
+import myImage from './assets/images/space.jpg'
+
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -40,7 +43,11 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
+        <div className="flex-column justify-flex-start min-100-vh myImage" style={{ backgroundImage: `url(${myImage})` }}>
+
+
+
+          
           <Header />
           <div className="container">
             <Route exact path="/">

@@ -4,7 +4,6 @@ import {Subhead, Link} from 'rebass'
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography'
 
-
 import { QUERY_PROFILES } from '../utils/queries';
 
 import journal  from  '../assets/images/journal.png';
