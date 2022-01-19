@@ -12,6 +12,17 @@ html {
   /* 2 */
 }
 
+#myImage {
+  margin: auto 60px;
+}
+img.my-image{
+  width: 320px;
+
+}
+
+
+
+
 /* Sections
    ========================================================================== */
 /**
@@ -19,6 +30,8 @@ html {
  */
 body {
   margin: 0;
+  background-image: url("./assets/images/space.jpg");
+
 }
 
 /**
