@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/mindspace12',
+  process.env.MONGODB_URI || 'mongodb://localhost/mindspace',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
-    useFindAndModify: false,
+    useFindAndModify: true,
   }
 );
 

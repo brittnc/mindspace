@@ -1,14 +1,12 @@
 # MindSpace
 
-    Created by Angela Krider, Brittneylynn Crosby, Cody Ktestakis, Hardik Rola, Mandeep Saini, Shem Baijoo
-
 A user friendly application for mental health tracking.
 
-- User can 
-- User can 
-- User can 
-- User can 
+    Created by Angela Krider, Brittneylynn Crosby, Cody Ktestakis, Hardik Rola, Mandeep Saini, Shem Baijoo
 
+- User can create a Profile, Log In & Log Out
+- User can track daily mood
+- User can fill out daily journal
 
 ## Table of Contents
 
@@ -19,20 +17,19 @@ A user friendly application for mental health tracking.
 
 ## Technology
 
-1. 
-2. 
-3. 
-4. 
-5. 
-6. 
+1. ReactJS
+2. Chakra-UI
+3. MongoDB
+4. Express
+5. GraphQL
+6. Node.js
+7. Mongoose ODM
 
 ## Features
 
-- 
-- 
-- 
-- 
-- 
+- User Accounts
+- Interactive mood tracker
+- Interactive mood journal
 
 ## Repository
 
