@@ -11,7 +11,7 @@ const Header = (props) => {
     event.preventDefault();
     Auth.logout();
   };
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(true);
   const toggle = () => setIsOpen(!isOpen);
   return (
     <header className="align-center">
