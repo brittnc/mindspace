@@ -1,3 +1,4 @@
 const Profile = require('./Profile');
+const SymptomJournal = require('./Symptom')
 
-module.exports = { Profile };
+module.exports = { Profile, SymptomJournal };

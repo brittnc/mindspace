@@ -14,15 +14,15 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import SymptomJournal from './container/SymptomJournal';
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
-  // get the authentication token from local storage if it exists
   const token = localStorage.getItem('id_token');
-  // return the headers to the context so httpLink can read them
   return {
     headers: {
       ...headers,
@@ -45,6 +45,9 @@ function App() {
           <div className="container">
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route exact path="/symptoms" >
+              <SymptomJournal />
             </Route>
             <Route exact path="/login">
               <Login />
