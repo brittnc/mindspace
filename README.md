@@ -9,6 +9,12 @@ A user friendly application for mental health tracking.
 - User can 
 - User can 
 
+<<<<<<< HEAD
+=======
+- User can create a Profile, Log In & Log Out
+- User can track daily mood
+- User can fill out daily journal
+>>>>>>> 82f8275f047cb3227e77c048ac2d88bae3ecee01
 
 ## Table of Contents
 
@@ -28,11 +34,17 @@ A user friendly application for mental health tracking.
 
 ## Features
 
+<<<<<<< HEAD
 - 
 - 
 - 
 - 
 - 
+=======
+- User Accounts
+- Interactive mood tracker
+- Interactive mood journal
+>>>>>>> 82f8275f047cb3227e77c048ac2d88bae3ecee01
 
 ## Repository
 
