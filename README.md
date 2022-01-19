@@ -5,8 +5,8 @@ A user friendly application for mental health tracking.
     Created by Angela Krider, Brittneylynn Crosby, Cody Ktestakis, Hardik Rola, Mandeep Saini, Shem Baijoo
 
 - User can create a Profile, Log In & Log Out
-- User will answer a series of questions reflecting the PHQ-9
-- User will view dashboard of mood charts
+- User can track daily mood
+- User can fill out daily journal
 
 ## Table of Contents
 
@@ -28,10 +28,8 @@ A user friendly application for mental health tracking.
 ## Features
 
 - User Accounts
-- Interactive mood trackers
--
--
--
+- Interactive mood tracker
+- Interactive mood journal
 
 ## Repository
 

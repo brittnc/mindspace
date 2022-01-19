@@ -25,5 +25,9 @@
   "homepage": "https://github.com/brittnc/mindspace#readme",
   "devDependencies": {
     "concurrently": "^7.0.0"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^1.1.1",
+    "@mui/icons-material": "^5.2.5"
   }
 }
