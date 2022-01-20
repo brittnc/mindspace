@@ -65,7 +65,9 @@ function App() {
             <Route exact path="/profiles/:profileId">
               <Profile />
             </Route>
-            <Route>Form</Route>
+            <Route exact path="/Form" >
+              <Form></Form>
+            </Route>
           </div>
           <Footer />
         </div>
