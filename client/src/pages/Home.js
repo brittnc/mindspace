@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography'
 import { QUERY_PROFILES } from '../utils/queries';
 
 import journal  from  '../assets/images/journal.png';
+import day from'../assets/images/day.png';
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_PROFILES);
@@ -31,14 +32,20 @@ const Home = () => {
             </Link>
           </Subhead>
         </Grid>
-
-     
-
-    
-
-    
-
         
+        <Grid item xs={12} sm={6} md={4} className='headline'>
+          <Typography align="center" className='headingImage'>
+          How's you day?
+          </Typography>
+          <Subhead align="center">
+            <Link
+              href="/form"
+            >
+              <img src={day} alt="day log" />
+            </Link>
+          </Subhead>
+        </Grid>
+     
       </Grid>
     </div>
   </div>

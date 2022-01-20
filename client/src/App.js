@@ -17,6 +17,7 @@ import Footer from './components/Footer';
 import SymptomJournal from './container/SymptomJournal';
 
 
+import Form from './components/Form/EntryForm';
 import myImage from './assets/images/space.jpg'
 
 
@@ -44,10 +45,6 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh myImage" style={{ backgroundImage: `url(${myImage})` }}>
-
-
-
-          
           <Header />
           <div className="container">
             <Route exact path="/">
@@ -67,6 +64,9 @@ function App() {
             </Route>
             <Route exact path="/profiles/:profileId">
               <Profile />
+            </Route>
+            <Route exact path="/Form" >
+              <Form></Form>
             </Route>
           </div>
           <Footer />

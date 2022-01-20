@@ -20,8 +20,32 @@ img.my-image{
 
 }
 
+ul.range-labels{
+  position: relative;
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 6px;
+  font-weight: bold;
+}
+.headingImage, img{
+  width: 100%;
 
+}
+.numLine{
+  width: 99%;
+ 
+}
+.textArea2  {
+  width: 99%;
 
+}
+.textArea1{
+  width: 99%;
+
+}
 
 /* Sections
    ========================================================================== */
