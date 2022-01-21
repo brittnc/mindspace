@@ -65,12 +65,7 @@ const UserSchema = new Schema({
     },
   ],
  
-  attachments: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Attachement',
-    },
-  ],
+  
   symptoms: [
     {
       type: Schema.Types.ObjectId,
