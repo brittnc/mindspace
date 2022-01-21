@@ -13,7 +13,7 @@ const styles = {
   drawerPaper: {
     position: 'relative',
     width: drawerWidth,
-    backgroundColor: '#2b91bf',
+    backgroundColor: '#0e5f76',
   },
   navItem: {
     marginTop: 8,
@@ -35,41 +35,43 @@ class Sidebar extends React.Component {
           <List>
             <ListItem className={classes.navItem} component={Link} to="/home">
               <ListItemText>
-                <Tooltip
-                  title="Home"
-                  placement="top"
-                >
-                  <IconButton> <i className="fas fa-home" /></IconButton>
+                <Tooltip title="Home" placement="top">
+                  <IconButton>
+                    {' '}
+                    <i className="fas fa-home" />
+                  </IconButton>
                 </Tooltip>
               </ListItemText>
             </ListItem>
             <ListItem className={classes.navItem} component={Link} to="/log">
               <ListItemText>
-                <Tooltip
-                  title="My health log"
-                  placement="top"
-                >
-                  <IconButton>  <i className="fas fa-notes-medical" /></IconButton>
+                <Tooltip title="My health log" placement="top">
+                  <IconButton>
+                    {' '}
+                    <i className="fas fa-notes-medical" />
+                  </IconButton>
                 </Tooltip>
               </ListItemText>
             </ListItem>
-            <ListItem className={classes.navItem} component={Link} to="/symptoms">
+            <ListItem
+              className={classes.navItem}
+              component={Link}
+              to="/symptoms"
+            >
               <ListItemText>
-                <Tooltip
-                  title="My Journal"
-                  placement="top"
-                >
-                  <IconButton><i className="fas fa-sticky-note" /></IconButton>
+                <Tooltip title="My Journal" placement="top">
+                  <IconButton>
+                    <i className="fas fa-sticky-note" />
+                  </IconButton>
                 </Tooltip>
               </ListItemText>
             </ListItem>
             <ListItem className={classes.navItem} component={Link} to="/charts">
               <ListItemText>
-                <Tooltip
-                  title="Charts"
-                  placement="top"
-                >
-                  <IconButton><i className="fas fa-chart-line" /></IconButton >
+                <Tooltip title="Charts" placement="top">
+                  <IconButton>
+                    <i className="fas fa-chart-line" />
+                  </IconButton>
                 </Tooltip>
               </ListItemText>
             </ListItem>

@@ -29,7 +29,7 @@ const styles = {
     flexWrap: 'wrap',
     borderStyle: 'solid',
     borderWidth: 4,
-    borderColor: '#2b91bf',
+    borderColor: '#0e5f76',
     marginBottom: 40,
   },
   formControl: {

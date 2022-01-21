@@ -6,7 +6,10 @@ import Typography from 'material-ui/Typography';
 import { withStyles } from 'material-ui/styles';
 import HamburgerMenu from './HamburgerMenu';
 import { Link } from 'react-router-dom';
+
 import axios from 'axios';
+
+import logo from '../../assets/images/mindspace.png';
 
 const styles = {
   root: {
@@ -23,6 +26,10 @@ const styles = {
   button: {
     color: 'white',
   },
+  logo: {
+    width: 150,
+    height: 150,
+  },
 };
 
 function NavBar(props) {
@@ -33,7 +40,7 @@ function NavBar(props) {
         <Toolbar>
           <HamburgerMenu className={classes.menuButton} aria-label="Menu" />
             <Typography variant="title" color="inherit" className={classes.flex} component={Link} to="/home">
-              MindSpace
+              <img className={classes.logo} src={logo} />
             </Typography>
             <Button className={classes.button} onClick={() => {
               axios.post('/Auth/logout').then(data => console.log(data))
