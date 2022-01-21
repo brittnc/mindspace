@@ -58,7 +58,7 @@ app.get('/populateduser', function (req, res) {
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/mindespace',
+  process.env.MONGODB_URI || 'mongodb://localhost/mindspace',
   {
     useCreateIndex: true,
     useNewUrlParser: true,
@@ -67,7 +67,7 @@ mongoose.connect(
 );
 
 var MONGODB_URI =
-  process.env.MONGODB_URI || 'mongodb://localhost/mindespace';
+  process.env.MONGODB_URI || 'mongodb://localhost/mindspace';
 
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, {
