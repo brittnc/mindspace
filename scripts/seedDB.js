@@ -3,60 +3,41 @@ const db = require('../models');
 
 mongoose.Promise = global.Promise;
 
-
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mindspace',{
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mindspace', {
   useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: true,
-
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: true,
 });
 
-
-const prescriptionSeed = [
+const doctorSeed = [
   {
-    prescriptionName: 'lansiprosole',
-    amount: '10mLs',
-    timesaday: 2,
-    dateprescribed: '10/16/16',
-    doctorprescibed: 'Dr. Kristin King',
-    generalinstructions: 'Take half hour before breakfast and dinner.',
+    firstname: 'Dr.',
+    lastname: 'Papeer',
+    clinic: 'Clinic A',
+    phone: '666-666-6666',
   },
   {
-    prescriptionName: 'prednisolone',
-    amount: '10mLs',
-    timesaday: 2,
-    dateprescribed: '10/16/17',
-    doctorprescibed: 'Dr. Kristin King',
-    generalinstructions: 'Prescription dose increased. Take with meds, be careful about taking too close to bed time.',
+    firstname: 'Jimmy',
+    lastname: 'Johns',
+    clinic: 'Clinic B',
+    phone: '555-555-5555',
   },
   {
-    prescriptionName: 'singulair',
-    amount: '5mL disolvable tablet',
-    timesaday: 1,
-    dateprescribed: '10/16/17',
-    doctorprescibed: 'Dr. Larry Lungs',
-    generalinstructions: 'Take at bed time. Can cause night-terrors',
-  },
-  {
-    prescriptionName: 'qnasl',
-    amount: '1 spray each nostril',
-    timesaday: 1,
-    dateprescribed: '10/16/18',
-    doctorprescibed: 'Dr. Sam Sneezy',
-    generalinstructions: 'Difficult to take, hurts at first. Do in the morning 15minutes after any other nose sprays',
+    firstname: 'Queen',
+    lastname: 'King',
+    clinic: 'Clinic C',
+    phone: '444-444-4444',
   },
 ];
 
-db.Prescription
-  .remove({})
-  .then(() => db.Prescription.collection.insertMany(prescriptionSeed))
+db.Doctor.remove({})
+  .then(() => db.Doctor.collection.insertMany(doctorSeed))
   .then((data) => {
-    console.log(data.insertedIds.length + ' prescription list records inserted!');
+    console.log(data.insertedIds.length + ' doctors inserted!');
     process.exit(0);
   })
   .catch((err) => {
     console.error(err);
     process.exit(1);
   });
-
