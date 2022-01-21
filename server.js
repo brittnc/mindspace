@@ -5,7 +5,9 @@ const bodyParser = require('body-parser');
 const routes = require('./routes');
 const User = require('./models/User');
 
+// Server will use port 3001.
 const PORT = process.env.PORT || 3001;
+// Yes, the app uses express.
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -16,6 +18,7 @@ const db = require('./models');
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 }
+
 
 app.get('/user', function (req, res) {
   db.User.find({})
@@ -46,6 +49,7 @@ app.post('/submit', function (req, res) {
 });
 
 app.get('/populateduser', function (req, res) {
+  // Find all users
   db.User.find({})
     .populate('healthLog')
     .then(function (dbUser) {
@@ -58,8 +62,7 @@ app.get('/populateduser', function (req, res) {
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/mindspace',
-  {
+  process.env.MONGODB_URI || 'mongodb://localhost/mindspace',{
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -74,7 +77,6 @@ mongoose.connect(MONGODB_URI, {
   useMongoClient: true,
 });
 
-// configurePassport
 const configurePassport = require('./controllers/passport');
 
 const passport = configurePassport(app, mongoose, User);

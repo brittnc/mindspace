@@ -2,35 +2,25 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-
-const HealthLogSchema = new Schema({
-  date: {
+const DoctorSchema = new Schema({
+  firstname: {
     type: String,
     trim: true,
     required: 'First name is required',
   },
-  doctor: {
+  lastname: {
     type: String,
     trim: true,
-    required: 'First name is required',
+    required: 'Last name is required',
   },
-  visitPurpose: {
+  clinic: {
+    type: String,
+    trim: true,
+  },
+  phone: {
     type: String,
     trim: true,
     required: 'Specialty is Required',
-  },
-  notes: {
-    type: String,
-    trim: true,
-    required: 'Specialty is Required',
-  }, 
-  heightIn: {
-    type: Number,
-    trim: true,
-  },
-  weightLb: {
-    type: Number,
-    trim: true,
   },
   // `date` must be of type Date. The default value is the current date
   userCreated: {
@@ -39,6 +29,6 @@ const HealthLogSchema = new Schema({
   },
 });
 
-const HealthLog = mongoose.model('HealthLog', HealthLogSchema);
+const Doctor = mongoose.model('Doctor', DoctorSchema);
 
-module.exports = HealthLog;
+module.exports = Doctor;
