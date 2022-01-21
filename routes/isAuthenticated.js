@@ -1,6 +1,5 @@
-// from Stack Overflow
 module.exports = function (req, res, next) {
- 
+
   console.log('checking if user is authenticated!!')
   if (req.isAuthenticated()) {
     console.log('authentication was successful!')
