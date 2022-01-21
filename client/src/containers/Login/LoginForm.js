@@ -49,18 +49,15 @@ const styles = (theme) => ({
 });
 
 class LoginForm extends React.Component {
-  // State to toggle password visibility.
   state = {
     password: '',
     showPassword: false,
   };
 
-  // Toggle password visibility
   handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
 
-  // Toggle password visiblity
   handleClickShowPassword = () => {
     this.setState({ showPassword: !this.state.showPassword });
   };
@@ -167,5 +164,4 @@ class LoginForm extends React.Component {
   }
 }
 
-// Export the LoginForm component with styling.
 export default withStyles(styles)(LoginForm);

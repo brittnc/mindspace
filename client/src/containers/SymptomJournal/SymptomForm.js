@@ -1,6 +1,5 @@
 // Importing React since we are using React.
 import React from 'react';
-// Importing material-ui components and style.
 import TextField from 'material-ui/TextField';
 import { InputLabel } from 'material-ui/Input';
 import Card, { CardContent } from 'material-ui/Card';
@@ -17,7 +16,6 @@ const styles = (theme) => ({
   textField: {
     marginTop: 60,
   },
-  // Tell Material-UI what's the font-size on the html element is.
   typography: {
     htmlFontSize: 40,
   },

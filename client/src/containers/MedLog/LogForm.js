@@ -16,7 +16,6 @@ const styles = {
   textField: {
     marginTop: 60,
   },
-  // Tell Material-UI what's the font-size on the html element is.
   typography: {
     htmlFontSize: 40,
   },

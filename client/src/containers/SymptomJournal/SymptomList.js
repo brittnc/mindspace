@@ -1,6 +1,5 @@
 // Import React
 import React from 'react';
-// Import UI components and style from material-ui-next.
 import { withStyles } from 'material-ui/styles';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
@@ -25,7 +24,6 @@ const styles = (theme) => ({
   },
 });
 
-// Symptom List component on the My symptom journal page.
 class SymptomList extends React.Component {
   render() {
     const { classes } = this.props;
@@ -64,5 +62,4 @@ class SymptomList extends React.Component {
   }
 }
 
-// Export SymptomList component with styling.
 export default withStyles(styles)(SymptomList);

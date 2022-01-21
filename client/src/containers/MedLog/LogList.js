@@ -37,7 +37,6 @@ const styles = (theme) => ({
   },
 });
 
-// Log List component on the My health log page.
 class LogList extends React.Component {
   render() {
     const { classes } = this.props;
