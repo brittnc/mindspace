@@ -18,6 +18,10 @@ import SymptomJournal from "./container/SymptomJournal";
 import { Box } from "@chakra-ui/react";
 import bgImg from "./assets/images/space2.png";
 
+import Form from './components/Form/EntryForm';
+import myImage from './assets/images/space.jpg'
+
+
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
