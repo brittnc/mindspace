@@ -86,7 +86,7 @@ class Login extends Component {
         <Grid item xs={12} className={classes.headline}>
           <Grid container spacing={16} className={classes.root} justify="center">
             <Typography variant="display1">
-              Welcome to HealthTracker
+              Welcome to MindSpace
             </Typography>
           </Grid>
         </Grid>,
