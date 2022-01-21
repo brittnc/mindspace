@@ -64,12 +64,7 @@ const UserSchema = new Schema({
       ref: 'HealthLog',
     },
   ],
-  prescriptions: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Prescription',
-    },
-  ],
+ 
   attachments: [
     {
       type: Schema.Types.ObjectId,
