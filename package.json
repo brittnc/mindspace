@@ -1,36 +1,43 @@
 {
-  "name": "mindspace",
+  "name": "MindSpace",
   "version": "1.0.0",
-  "description": "",
-  "engines": {
-    "node": "14.x"
-  },
-  "main": "server/server.js",
-  "scripts": {
-    "start": "node server/server.js",
-    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-    "install": "cd server && npm i && cd ../client && npm i",
-    "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brittnc/mindspace.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/brittnc/mindspace/issues"
-  },
-  "homepage": "https://github.com/brittnc/mindspace#readme",
-  "devDependencies": {
-    "concurrently": "^7.0.0"
-  },
+  "private": true,
+  "main": "server.js",
   "dependencies": {
-    "@chakra-ui/icons": "^1.1.1",
-    "@mui/icons-material": "^5.2.5",
-    "express": "^4.17.2",
-    "react-redux": "^7.2.6",
-    "react-redux-firebase": "^3.11.0"
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "chartist": "^0.11.0",
+    "connect-mongo": "^2.0.1",
+    "express": "^4.15.4",
+    "express-session": "^1.15.6",
+    "fusioncharts": "^3.12.2",
+    "mongoose": "^5.0.15",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "react-chartist": "^0.13.1",
+    "react-fusioncharts": "^1.0.5",
+    "react-router-dom": "^4.2.2",
+    "yarn": "^1.6.0"
+  },
+  "scripts": {
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js",
+    "seed": "node scripts/seedDB.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "nodemon": "^1.11.0"
+  },
+  "engines": {
+    "node": "8.11.3"
   }
 }
