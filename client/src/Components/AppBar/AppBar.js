@@ -39,15 +39,26 @@ function NavBar(props) {
       <AppBar position="static" className="appBar">
         <Toolbar>
           <HamburgerMenu className={classes.menuButton} aria-label="Menu" />
-            <Typography variant="title" color="inherit" className={classes.flex} component={Link} to="/home">
-              <img className={classes.logo} src={logo} />
-            </Typography>
-            <Button className={classes.button} onClick={() => {
-              axios.post('/Auth/logout').then(data => console.log(data))
+          <Typography
+            variant="title"
+            color="inherit"
+            className={classes.flex}
+            component={Link}
+            to="/home"
+          >
+            <img className={classes.logo} src={logo} />
+          </Typography>
+          <Button
+            className={classes.button}
+            onClick={() => {
+              axios
+                .post('/Auth/logout')
+                .then((data) => console.log(data))
                 .then((res) => {
-                window.location = '/';
-              });
-            }}>    
+                  window.location = '/';
+                });
+            }}
+          >
             Logout
           </Button>
         </Toolbar>

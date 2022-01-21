@@ -18,6 +18,9 @@ const styles = {
   navItem: {
     marginTop: 8,
   },
+  icons: {
+    color: 'white',
+  },
 };
 
 class Sidebar extends React.Component {
@@ -36,7 +39,7 @@ class Sidebar extends React.Component {
             <ListItem className={classes.navItem} component={Link} to="/home">
               <ListItemText>
                 <Tooltip title="Home" placement="top">
-                  <IconButton>
+                  <IconButton className={classes.icons}>
                     {' '}
                     <i className="fas fa-home" />
                   </IconButton>
@@ -46,7 +49,7 @@ class Sidebar extends React.Component {
             <ListItem className={classes.navItem} component={Link} to="/log">
               <ListItemText>
                 <Tooltip title="My health log" placement="top">
-                  <IconButton>
+                  <IconButton className={classes.icons}>
                     {' '}
                     <i className="fas fa-notes-medical" />
                   </IconButton>
@@ -60,7 +63,7 @@ class Sidebar extends React.Component {
             >
               <ListItemText>
                 <Tooltip title="My Journal" placement="top">
-                  <IconButton>
+                  <IconButton className={classes.icons}>
                     <i className="fas fa-sticky-note" />
                   </IconButton>
                 </Tooltip>
@@ -69,7 +72,7 @@ class Sidebar extends React.Component {
             <ListItem className={classes.navItem} component={Link} to="/charts">
               <ListItemText>
                 <Tooltip title="Charts" placement="top">
-                  <IconButton>
+                  <IconButton className={classes.icons}>
                     <i className="fas fa-chart-line" />
                   </IconButton>
                 </Tooltip>
