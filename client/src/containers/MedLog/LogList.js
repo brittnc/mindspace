@@ -23,6 +23,9 @@ const styles = (theme) => ({
     marginLeft: 20,
     color: 'white',
   },
+  subtext: {
+    color: 'white',
+  },
   logItem: {
     marginTop: 34,
     backgroundColor: '#0e5f76',
@@ -52,32 +55,32 @@ class LogList extends React.Component {
         <ExpansionPanelDetails>
           <List>
             <ListItem>
-              <ListItemText>
-                <b>Doctor:</b> {this.props.doctor}
+              <ListItemText >
+                <b className={classes.subtext}>Doctor: {this.props.doctor}</b> 
               </ListItemText>
             </ListItem>
 
             <ListItem>
               <ListItemText>
-                <b>Reason for visit:</b> {this.props.visitPurpose}
+                <b className={classes.subtext}>Reason for visit: {this.props.visitPurpose}</b> 
               </ListItemText>
             </ListItem>
 
             <ListItem>
               <ListItemText>
-                <b>Height (inches):</b> {this.props.heightIn}
+                <b className={classes.subtext}>Height (inches): {this.props.heightIn}</b> 
               </ListItemText>
             </ListItem>
 
             <ListItem>
               <ListItemText>
-                <b>Weight (pounds):</b> {this.props.weightLb}
+                <b className={classes.subtext}>Weight (pounds): {this.props.weightLb }</b> 
               </ListItemText>
             </ListItem>
 
             <ListItem>
               <ListItemText>
-                <b>Visit notes:</b> {this.props.visitNotes}
+                <b className={classes.subtext}>Visit notes: {this.props.visitNotes}</b> 
               </ListItemText>
             </ListItem>
           </List>
