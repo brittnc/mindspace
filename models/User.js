@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
+
 const Schema = mongoose.Schema;
+
 
 const UserSchema = new Schema({
   firstname: {
@@ -10,13 +12,14 @@ const UserSchema = new Schema({
     type: String,
     trim: true,
   },
-
+  
   username: {
     type: String,
     trim: true,
     unique: true,
     required: 'Username is Required',
   },
+ 
   password: {
     type: String,
     trim: true,
@@ -28,30 +31,36 @@ const UserSchema = new Schema({
       'Password should be longer.',
     ],
   },
+ 
   email: {
     type: String,
     unique: true,
     match: [/.+@.+\..+/, 'Please enter a valid e-mail address'],
   },
+  // `date` must be of type Date. The default value is the current date
   userCreated: {
     type: Date,
     default: Date.now,
   },
+  
   doctors: [
     {
       type: Schema.Types.ObjectId,
       ref: 'Doctor',
     },
   ],
+
   clinics: [
     {
       type: Schema.Types.ObjectId,
       ref: 'Clinic',
     },
   ],
+ 
   healthLogs: [
     {
       type: Schema.Types.ObjectId,
+      
       ref: 'HealthLog',
     },
   ],

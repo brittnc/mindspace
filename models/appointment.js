@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-// more about RegEx Patterns here https://www.regexbuddy.com/regex.html
 const AppointmentSchema = new Schema({
   date: {
     type: Date,
@@ -13,11 +12,13 @@ const AppointmentSchema = new Schema({
     trim: true,
     required: 'Address is required',
   },
+  // this is populated by dropdown
   doctor: {
     type: String,
     trim: true,
     required: 'Address is required',
   },
+  //this is reason for visit
   appointmentName: {
     type: String,
     trim: true,
