@@ -9,11 +9,11 @@ const styles = {
   },
   copyright: {
     marginTop: 10,
-    backgroundColor: '#2b91bf',
+    backgroundColor: '#0e5f76',
     color: 'white',
   },
   footerContent: {
-    backgroundColor: '#2b91bf',
+    backgroundColor: '#0e5f76',
     color: 'white',
   },
   button: {
@@ -30,7 +30,12 @@ class Footer extends React.Component {
     return (
       <Card className="footer">
         <CardContent>
-          <Typography gutterBottom variant="headline" component="h2" className={classes.footerContent}>
+          <Typography
+            gutterBottom
+            variant="headline"
+            component="h2"
+            className={classes.footerContent}
+          >
             MindSpace
           </Typography>
           <Typography component="p" className={classes.footerContent}>

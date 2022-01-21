@@ -24,9 +24,9 @@ body {
 /* Color of top navigation bar */
 /*#007AC1*/
 .appBar {
-  background-color: #2b91bf !important;
-  padding-bottom: 20px;
-  border-bottom: 8px solid #2F4858;
+  background-color: #0e5f76 !important;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #2F4858;
 }
 
 /* Color of headers */
@@ -40,9 +40,9 @@ a {
 }
 
 .footer {
-  background-color: #2b91bf !important;
+  background-color: #0e5f76 !important;
   color: 'white';
-  border-top: 8px solid #2F4858;
+  border-top: 2px solid #2F4858;
 }
 
 

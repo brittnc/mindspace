@@ -25,7 +25,7 @@ const styles = (theme) => ({
   },
   logItem: {
     marginTop: 34,
-    backgroundColor: '#2b91bf',
+    backgroundColor: '#0e5f76',
     color: 'white',
   },
   button: {

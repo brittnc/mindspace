@@ -33,13 +33,13 @@ const styles = (theme) => ({
   button: {
     marginTop: 40,
     padding: 15,
-    backgroundColor: '#2b91bf',
+    backgroundColor: '#0e5f76',
     color: 'white',
   },
   signUpButton: {
     marginTop: 40,
     padding: 15,
-    backgroundColor: '#2b91bf',
+    backgroundColor: '#0e5f76',
     color: 'white',
     float: 'right',
   },
