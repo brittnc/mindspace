@@ -5,6 +5,7 @@ const Client = require('../models/Client');
 const Token = require('../models/token');
 const Code = require('../models/code');
 
+// create oauth server
 const server = oauth2orize.createServer();
 
 
@@ -21,6 +22,7 @@ server.deserializeClient(function(id, done) {
 
 
 server.grant(oauth2orize.grant.code(function(client, redirectUri, user, ares, callback) {
+  // create new authorization code
   var code = new Code({
     value: uid(16),
     clientId: client._id,
@@ -37,15 +39,14 @@ server.grant(oauth2orize.grant.code(function(client, redirectUri, user, ares, ca
 }));
 
 
-// exchange authorization codes for access tokens
 server.exchange(oauth2orize.exchange.code(function(client, code, redirectUri, callback) {
-  // find & validate access token matching with authorization code
   Code.findOne({ value: code }, function (err, authCode) {
     if (err) { return callback(err); }
     if (authCode === undefined) { return callback(null, false); }
     if (client._id.toString() !== authCode.clientId) { return callback(null, false); }
     if (redirectUri !== authCode.redirectUri) { return callback(null, false); }
 
+    // delete old authorization code so it will not be reused
     authCode.remove(function (err) {
       if(err) { return callback(err); }
 
@@ -79,6 +80,8 @@ exports.authorization = [
     res.render('REACT COMPONENT??', { transactionID: req.oauth2.transactionID, user: req.user, client: req.oauth2.client });
   }
 ]
+
+
 
 exports.decision = [
   server.decision()
