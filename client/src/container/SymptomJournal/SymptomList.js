@@ -1,15 +1,18 @@
-import React from 'react';
-import Paper from 'material-ui/Paper';
-import Typography from 'material-ui/Typography';
-import Button from 'material-ui/Button';
-
-
+import React from "react";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 
 class SymptomList extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <Paper className={classes.root} elevation={4} id={this.props.id} key={this.props.id}>
+      <Paper
+        className={classes.root}
+        elevation={4}
+        id={this.props.id}
+        key={this.props.id}
+      >
         <Typography component="p">
           <b>Symptom:</b> {this.props.type}
         </Typography>
@@ -22,10 +25,20 @@ class SymptomList extends React.Component {
         <Typography component="p">
           <b>More info:</b> {this.props.info}
         </Typography>
-        <Button size="small" color="primary" variant="raised" className={classes.button} onClick={() => { this.props.deleteSymptom(this.props.id); }}>Remove</Button>
+        <Button
+          size="small"
+          color="primary"
+          variant="raised"
+          className={classes.button}
+          onClick={() => {
+            this.props.deleteSymptom(this.props.id);
+          }}
+        >
+          Remove
+        </Button>
       </Paper>
     );
   }
 }
 
-export default (SymptomList);
+export default SymptomList;

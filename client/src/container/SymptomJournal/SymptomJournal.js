@@ -1,24 +1,24 @@
 // Importing React since we are using React.
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import SymptomTextFields from './SymptomForm';
-import SymptomList from './SymptomList';
-import SymptomAPI from '../../utils/SymptomAPI';
-import Typography from 'material-ui/Typography';
-import Grid from 'material-ui/Grid';
+import SymptomTextFields from "./SymptomForm";
+import SymptomList from "./SymptomList";
+import SymptomAPI from "../../utils/SymptomAPI";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
 
 class SymptomJournal extends Component {
   state = {
-    symptomType: '',
-    symptomDay: '',
-    symptomTime: '',
-    symptomInfo: '',
+    symptomType: "",
+    symptomDay: "",
+    symptomTime: "",
+    symptomInfo: "",
     symptoms: [],
-    symptomTypeError: '',
-    symptomDayError: '',
-    symptomTimeError: '',
-    symptomInfoError: '',
-    formSuccessMessage: '',
+    symptomTypeError: "",
+    symptomDayError: "",
+    symptomTimeError: "",
+    symptomInfoError: "",
+    formSuccessMessage: "",
   };
 
   componentDidMount() {
@@ -30,10 +30,10 @@ class SymptomJournal extends Component {
       .then((res) =>
         this.setState({
           symptoms: res.data,
-          symptomDay: '',
-          symptomTime: '',
-          symptomInfo: '',
-          symptoms:[],
+          symptomDay: "",
+          symptomTime: "",
+          symptomInfo: "",
+          symptoms: [],
         })
       )
       .catch((err) => console.log(err));
@@ -45,66 +45,62 @@ class SymptomJournal extends Component {
       .catch((err) => console.log(err));
   };
 
- 
   handleSymptomTypeChange = (event) => {
     this.setState({
       symptomType: event.target.value,
-      symptomTypeError: '',
-      formSuccessMessage: '',
+      symptomTypeError: "",
+      formSuccessMessage: "",
     });
   };
-
 
   handleSymptomDayChange = (event) => {
     this.setState({
       symptomDay: event.target.value,
-      symptomDayError: '',
-      formSuccessMessage: '',
+      symptomDayError: "",
+      formSuccessMessage: "",
     });
   };
 
- 
   handleSymptomTimeChange = (event) => {
     this.setState({
       symptomTime: event.target.value,
-      symptomTimeError: '',
-      formSuccessMessage: '',
+      symptomTimeError: "",
+      formSuccessMessage: "",
     });
   };
 
-  
   handleSymptomInfoChange = (event) => {
     this.setState({
       symptomInfo: event.target.value,
-      symptomInfoError: '',
-      formSuccessMessage: '',
+      symptomInfoError: "",
+      formSuccessMessage: "",
     });
   };
 
   handleFormSubmit = (event) => {
     event.preventDefault();
 
-    if (this.state.symptomType === '') {
+    if (this.state.symptomType === "") {
       this.setState({
-        symptomTypeError: 'Select a symptom from the drop-down list.',
+        symptomTypeError: "Select a symptom from the drop-down list.",
       });
     }
 
-    if (this.state.symptomDay === '' || this.state.symptomDay === 'mm/dd/yyy') {
+    if (this.state.symptomDay === "" || this.state.symptomDay === "mm/dd/yyy") {
       this.setState({
         symptomDayError:
-          'Use the date picker to select the day when the symptom occurred.',
+          "Use the date picker to select the day when the symptom occurred.",
       });
     }
 
-    if (this.state.symptomTime === '') {
+    if (this.state.symptomTime === "") {
       this.setState({
         symptomTimeError:
-          'Use the time picker to select the time when the symptom occurred using the HH:MM AM/PM format.',
+          "Use the time picker to select the time when the symptom occurred using the HH:MM AM/PM format.",
       });
     }
 
-    if (this.state.symptomInfo === '') {
+    if (this.state.symptomInfo === "") {
       this.setState({
         symptomInfoError:
           "Enter any additonal information about the symptom. If you don't have any other information, type N/A for this field.",
@@ -123,7 +119,7 @@ class SymptomJournal extends Component {
         formSuccessMessage: `${this.state.symptomType} from ${this.state.symptomDay} added successfully!`,
       });
 
-      document.getElementById('symptom-form').reset();
+      document.getElementById("symptom-form").reset();
     }
   };
 
