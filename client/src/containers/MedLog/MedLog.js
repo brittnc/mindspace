@@ -1,48 +1,49 @@
 // Importing React since we are using React.
-import React, { Component } from 'react';
-import NavBar from '../../Components/AppBar';
-import LogForm from './LogForm';
-import LogList from './LogList';
-import MedLogAPI from '../../utils/MedLogAPI';
-import DoctorsAPI from '../../utils/DoctorsAPI';
-import { withStyles } from 'material-ui/styles';
-import Typography from 'material-ui/Typography';
-import Grid from 'material-ui/Grid';
-import Sidebar from '../../Components/Sidebar';
+import React, { Component } from "react";
+import NavBar from "../../Components/AppBar";
+import LogForm from "./LogForm";
+import LogList from "./LogList";
+import MedLogAPI from "../../utils/MedLogAPI";
+import DoctorsAPI from "../../utils/DoctorsAPI";
+import { withStyles } from "material-ui/styles";
+import Typography from "material-ui/Typography";
+import Grid from "material-ui/Grid";
+import Sidebar from "../../Components/Sidebar";
+import bgImg from "../../assets/images/space2.png";
 
 // Style/Theme
 const styles = (theme) => ({
   appFrame: {
     zIndex: 1,
-    overflow: 'hidden',
-    position: 'relative',
-    display: 'flex',
-    width: '100%',
+    overflow: "hidden",
+    position: "relative",
+    display: "flex",
+    width: "100%",
   },
   content: {
     flexGrow: 1,
-    backgroundColor: '#86BBD8',
+    backgroundImage: { bgImg },
     padding: theme.spacing.unit * 3,
   },
 });
 
 class MedLog extends Component {
   state = {
-    logDoctor: '',
-    logDate: '',
-    logVisitReason: '',
-    logHeight: '',
-    logWeight: '',
-    logNotes: '',
+    logDoctor: "",
+    logDate: "",
+    logVisitReason: "",
+    logHeight: "",
+    logWeight: "",
+    logNotes: "",
     logs: [],
     doctors: [],
-    logDoctorError: '',
-    logDateError: '',
-    logVisitReasonError: '',
-    logHeightError: '',
-    logWeightError: '',
-    logNotesError: '',
-    formSuccessMessage: '',
+    logDoctorError: "",
+    logDateError: "",
+    logVisitReasonError: "",
+    logHeightError: "",
+    logWeightError: "",
+    logNotesError: "",
+    formSuccessMessage: "",
   };
 
   // When the component mounts, load all logs and save them to this.state.logs.
@@ -69,92 +70,92 @@ class MedLog extends Component {
   loadDoctors = () => {
     DoctorsAPI.getDoctors()
       .then((res) => this.setState({ doctors: res.data }))
-      .catch((err) => console.log('getting doctors did not work: ', err));
+      .catch((err) => console.log("getting doctors did not work: ", err));
   };
 
   handleLogDoctorChange = (event) => {
     this.setState({
       logDoctor: event.target.value,
-      logDoctorError: '',
-      formSuccessMessage: '',
+      logDoctorError: "",
+      formSuccessMessage: "",
     });
   };
 
   handleLogDateChange = (event) => {
     this.setState({
       logDate: event.target.value,
-      logDateError: '',
-      formSuccessMessage: '',
+      logDateError: "",
+      formSuccessMessage: "",
     });
   };
 
   handleLogVisitReasonChange = (event) => {
     this.setState({
       logVisitReason: event.target.value,
-      logVisitReasonError: '',
-      formSuccessMessage: '',
+      logVisitReasonError: "",
+      formSuccessMessage: "",
     });
   };
 
   handleLogHeightChange = (event) => {
     this.setState({
       logHeight: event.target.value,
-      logHeightError: '',
-      formSuccessMessage: '',
+      logHeightError: "",
+      formSuccessMessage: "",
     });
   };
 
   handleLogWeightChange = (event) => {
     this.setState({
       logWeight: event.target.value,
-      logWeightError: '',
-      formSuccessMessage: '',
+      logWeightError: "",
+      formSuccessMessage: "",
     });
   };
 
   handleLogNotesChange = (event) => {
     this.setState({
       logNotes: event.target.value,
-      logNotesError: '',
-      formSuccessMessage: '',
+      logNotesError: "",
+      formSuccessMessage: "",
     });
   };
 
   handleFormSubmit = (event) => {
     event.preventDefault();
 
-    if (this.state.logDoctor === '') {
+    if (this.state.logDoctor === "") {
       this.setState({
-        logDoctorError: 'Select a doctor from the drop-down list.',
+        logDoctorError: "Select a doctor from the drop-down list.",
       });
     }
 
-    if (this.state.logDate === '' || this.state.logDate === 'mm/dd/yyy') {
+    if (this.state.logDate === "" || this.state.logDate === "mm/dd/yyy") {
       this.setState({
         logDateError:
-          'Use the date picker to select the date of the doctor visit.',
+          "Use the date picker to select the date of the doctor visit.",
       });
     }
 
-    if (this.state.logVisitReason === '') {
+    if (this.state.logVisitReason === "") {
       this.setState({
-        logVisitReasonError: 'Specify the reason for visiting.',
+        logVisitReasonError: "Specify the reason for visiting.",
       });
     }
 
-    if (this.state.logHeight === '') {
+    if (this.state.logHeight === "") {
       this.setState({
-        logHeightError: 'Enter a value for height (in inches).',
+        logHeightError: "Enter a value for height (in inches).",
       });
     }
 
-    if (this.state.logWeight === '') {
+    if (this.state.logWeight === "") {
       this.setState({
-        logWeightError: 'Enter a value for weight (in pounds).',
+        logWeightError: "Enter a value for weight (in pounds).",
       });
     }
 
-    if (this.state.logNotes === '') {
+    if (this.state.logNotes === "") {
       this.setState({
         logNotesError:
           "Enter any additional notes to associate with this doctor visit. If you don't have any additional notes to record, type N/A.",
@@ -175,7 +176,7 @@ class MedLog extends Component {
         formSuccessMessage: `Doctor notes from ${this.state.logDate} added successfully!`,
       });
 
-      document.getElementById('log-form').reset();
+      document.getElementById("log-form").reset();
     }
   };
 

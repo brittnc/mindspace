@@ -1,14 +1,16 @@
 // Importing React since we are using React.
-import React, { Component } from 'react';
-import NavBar from '../../Components/AppBar';
-import SymptomTextFields from './SymptomForm';
-import SymptomList from './SymptomList';
-import SymptomAPI from '../../utils/SymptomAPI';
-import { withStyles } from 'material-ui/styles';
-import Typography from 'material-ui/Typography';
-import Grid from 'material-ui/Grid';
+import React, { Component } from "react";
+import NavBar from "../../Components/AppBar";
+import SymptomTextFields from "./SymptomForm";
+import SymptomList from "./SymptomList";
+import SymptomAPI from "../../utils/SymptomAPI";
+import { withStyles } from "material-ui/styles";
+import Typography from "material-ui/Typography";
+import Grid from "material-ui/Grid";
+import bgImg from "../../assets/images/space2.png";
+
 // Import Sidebar component.
-import Sidebar from '../../Components/Sidebar';
+import Sidebar from "../../Components/Sidebar";
 
 // Style/Theme
 const styles = (theme) => ({
@@ -16,35 +18,35 @@ const styles = (theme) => ({
     marginTop: 10,
     marginBottom: 5,
     padding: 10,
-    backgroundColor: '#007AC1',
-    color: 'white',
+    backgroundColor: "#007AC1",
+    color: "white",
   },
   appFrame: {
     zIndex: 1,
-    overflow: 'hidden',
-    position: 'relative',
-    display: 'flex',
-    width: '100%',
+    overflow: "hidden",
+    position: "relative",
+    display: "flex",
+    width: "100%",
   },
   content: {
     flexGrow: 1,
-    backgroundColor: '#86BBD8',
+    backgroundImage: { bgImg },
     padding: theme.spacing.unit * 3,
   },
 });
 
 class SymptomJournal extends Component {
   state = {
-    symptomType: '',
-    symptomDay: '',
-    symptomTime: '',
-    symptomInfo: '',
+    symptomType: "",
+    symptomDay: "",
+    symptomTime: "",
+    symptomInfo: "",
     symptoms: [],
-    symptomTypeError: '',
-    symptomDayError: '',
-    symptomTimeError: '',
-    symptomInfoError: '',
-    formSuccessMessage: '',
+    symptomTypeError: "",
+    symptomDayError: "",
+    symptomTimeError: "",
+    symptomInfoError: "",
+    formSuccessMessage: "",
   };
 
   componentDidMount() {
@@ -56,9 +58,9 @@ class SymptomJournal extends Component {
       .then((res) =>
         this.setState({
           symptoms: res.data,
-          symptomDay: '',
-          symptomTime: '',
-          symptomInfo: '',
+          symptomDay: "",
+          symptomTime: "",
+          symptomInfo: "",
         })
       )
       .catch((err) => console.log(err));
@@ -73,59 +75,59 @@ class SymptomJournal extends Component {
   handleSymptomTypeChange = (event) => {
     this.setState({
       symptomType: event.target.value,
-      symptomTypeError: '',
-      formSuccessMessage: '',
+      symptomTypeError: "",
+      formSuccessMessage: "",
     });
   };
 
   handleSymptomDayChange = (event) => {
     this.setState({
       symptomDay: event.target.value,
-      symptomDayError: '',
-      formSuccessMessage: '',
+      symptomDayError: "",
+      formSuccessMessage: "",
     });
   };
 
   handleSymptomTimeChange = (event) => {
     this.setState({
       symptomTime: event.target.value,
-      symptomTimeError: '',
-      formSuccessMessage: '',
+      symptomTimeError: "",
+      formSuccessMessage: "",
     });
   };
 
   handleSymptomInfoChange = (event) => {
     this.setState({
       symptomInfo: event.target.value,
-      symptomInfoError: '',
-      formSuccessMessage: '',
+      symptomInfoError: "",
+      formSuccessMessage: "",
     });
   };
 
   handleFormSubmit = (event) => {
     event.preventDefault();
 
-    if (this.state.symptomType === '') {
+    if (this.state.symptomType === "") {
       this.setState({
-        symptomTypeError: 'Select a symptom from the drop-down list.',
+        symptomTypeError: "Select a symptom from the drop-down list.",
       });
     }
 
-    if (this.state.symptomDay === '' || this.state.symptomDay === 'mm/dd/yyy') {
+    if (this.state.symptomDay === "" || this.state.symptomDay === "mm/dd/yyy") {
       this.setState({
         symptomDayError:
-          'Use the date picker to select the day when the symptom occurred.',
+          "Use the date picker to select the day when the symptom occurred.",
       });
     }
 
-    if (this.state.symptomTime === '') {
+    if (this.state.symptomTime === "") {
       this.setState({
         symptomTimeError:
-          'Use the time picker to select the time when the symptom occurred using the HH:MM AM/PM format.',
+          "Use the time picker to select the time when the symptom occurred using the HH:MM AM/PM format.",
       });
     }
 
-    if (this.state.symptomInfo === '') {
+    if (this.state.symptomInfo === "") {
       this.setState({
         symptomInfoError:
           "Enter any additonal information about the symptom. If you don't have any other information, type N/A for this field.",
@@ -145,7 +147,7 @@ class SymptomJournal extends Component {
       });
 
       // Clear form
-      document.getElementById('symptom-form').reset();
+      document.getElementById("symptom-form").reset();
     }
   };
 

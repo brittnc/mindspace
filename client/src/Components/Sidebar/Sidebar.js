@@ -1,25 +1,25 @@
-import React from 'react';
-import { withStyles } from 'material-ui/styles';
-import Drawer from 'material-ui/Drawer';
-import List, { ListItem, ListItemText } from 'material-ui/List';
-import Hidden from 'material-ui/Hidden';
-import { Link } from 'react-router-dom';
-import Tooltip from 'material-ui/Tooltip';
-import IconButton from 'material-ui/IconButton';
+import React from "react";
+import { withStyles } from "material-ui/styles";
+import Drawer from "material-ui/Drawer";
+import List, { ListItem, ListItemText } from "material-ui/List";
+import Hidden from "material-ui/Hidden";
+import { Link } from "react-router-dom";
+import Tooltip from "material-ui/Tooltip";
+import IconButton from "material-ui/IconButton";
 
 const drawerWidth = 120;
 
 const styles = {
   drawerPaper: {
-    position: 'relative',
+    position: "relative",
     width: drawerWidth,
-    backgroundColor: '#0e5f76',
+    backgroundColor: "#0e5f76",
   },
   navItem: {
     marginTop: 8,
   },
   icons: {
-    color: 'white',
+    color: "white",
   },
 };
 
@@ -40,7 +40,7 @@ class Sidebar extends React.Component {
               <ListItemText>
                 <Tooltip title="Home" placement="top">
                   <IconButton className={classes.icons}>
-                    {' '}
+                    {" "}
                     <i className="fas fa-home" />
                   </IconButton>
                 </Tooltip>
@@ -50,7 +50,7 @@ class Sidebar extends React.Component {
               <ListItemText>
                 <Tooltip title="My health log" placement="top">
                   <IconButton className={classes.icons}>
-                    {' '}
+                    {" "}
                     <i className="fas fa-notes-medical" />
                   </IconButton>
                 </Tooltip>

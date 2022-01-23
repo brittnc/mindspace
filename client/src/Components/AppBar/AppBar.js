@@ -1,15 +1,15 @@
-import React from 'react';
-import AppBar from 'material-ui/AppBar';
-import Toolbar from 'material-ui/Toolbar';
-import Button from 'material-ui/Button';
-import Typography from 'material-ui/Typography';
-import { withStyles } from 'material-ui/styles';
-import HamburgerMenu from './HamburgerMenu';
-import { Link } from 'react-router-dom';
+import React from "react";
+import AppBar from "material-ui/AppBar";
+import Toolbar from "material-ui/Toolbar";
+import Button from "material-ui/Button";
+import Typography from "material-ui/Typography";
+import { withStyles } from "material-ui/styles";
+import HamburgerMenu from "./HamburgerMenu";
+import { Link } from "react-router-dom";
 
-import axios from 'axios';
+import axios from "axios";
 
-import logo from '../../assets/images/mindspace.png';
+import logo from "../../assets/images/mindspace.png";
 
 const styles = {
   root: {
@@ -24,7 +24,7 @@ const styles = {
     marginRight: 20,
   },
   button: {
-    color: 'white',
+    color: "white",
   },
   logo: {
     width: 150,
@@ -52,10 +52,10 @@ function NavBar(props) {
             className={classes.button}
             onClick={() => {
               axios
-                .post('/Auth/logout')
+                .post("/Auth/logout")
                 .then((data) => console.log(data))
                 .then((res) => {
-                  window.location = '/';
+                  window.location = "/";
                 });
             }}
           >

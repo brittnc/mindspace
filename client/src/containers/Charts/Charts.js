@@ -1,43 +1,44 @@
 // Importing React since we are using React.
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 // Import ChartsHeight which uses chartist
-import ChartsHeight from './ChartsHeight';
+import ChartsHeight from "./ChartsHeight";
 
 // Import ChartsWeight which uses chartist
-import ChartsWeight from './ChartsWeight';
+import ChartsWeight from "./ChartsWeight";
 
 // Import style and components from material-ui-next.
-import { withStyles } from 'material-ui/styles';
-import Typography from 'material-ui/Typography';
-import Grid from 'material-ui/Grid';
+import { withStyles } from "material-ui/styles";
+import Typography from "material-ui/Typography";
+import Grid from "material-ui/Grid";
+
+// Import image for background
+import bgImg from "../../assets/images/space2.png";
 
 // Import Sidebar component
-import Sidebar from '../../Components/Sidebar';
+import Sidebar from "../../Components/Sidebar";
 
 // Importing Navbar component.
-import NavBar from '../../Components/AppBar';
-
+import NavBar from "../../Components/AppBar";
 
 // Style/Theme
-const styles = theme => ({
+const styles = (theme) => ({
   appFrame: {
     zIndex: 1,
-    overflow: 'hidden',
-    position: 'relative',
-    display: 'flex',
-    width: '100%',
+    overflow: "hidden",
+    position: "relative",
+    display: "flex",
+    width: "100%",
   },
   content: {
     flexGrow: 1,
-    backgroundColor: '#86BBD8',
+    backgroundImage: { bgImg },
     padding: theme.spacing.unit * 3,
   },
   Charts: {
     marginTop: 30,
-    color: 'white',
+    color: "white",
   },
-
 });
 
 class Charts extends Component {
@@ -63,8 +64,7 @@ class Charts extends Component {
                   <ChartsWeight />
                 </Grid>
                 <Grid item xs={12}>
-                  <ChartsHeight
-                  />
+                  <ChartsHeight />
                 </Grid>
               </Grid>
             </div>
