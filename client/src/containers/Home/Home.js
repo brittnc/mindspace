@@ -1,17 +1,17 @@
 // Importing React since we are using React.
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // Importing UI components from rebass.
-import { Subhead, Link } from 'rebass';
+import { Subhead, Link } from "rebass";
 // Import UI components from material-ui-next.
-import { withStyles } from 'material-ui/styles';
-import Grid from 'material-ui/Grid';
-import Typography from 'material-ui/Typography';
+import { withStyles } from "material-ui/styles";
+import Grid from "material-ui/Grid";
+import Typography from "material-ui/Typography";
 // Importing icons/images
-import report from '../../assets/images/medical_report.png';
-import journal from '../../assets/images/journal.png';
-import chart from '../../assets/images/chart2.png';
+import report from "../../assets/images/medical_report.png";
+import journal from "../../assets/images/journal.png";
+import chart from "../../assets/images/chart2.png";
 // Importing Navbar component.
-import NavBar from '../../Components/AppBar';
+import NavBar from "../../Components/AppBar";
 
 const styles = {
   root: {
@@ -20,9 +20,13 @@ const styles = {
   headline: {
     marginTop: 50,
   },
+  title: {
+    color: "white",
+  },
   heading: {
     fontSize: 35,
-  }
+    color: "white",
+  },
 };
 
 class Home extends Component {
@@ -32,13 +36,22 @@ class Home extends Component {
       <NavBar />,
       <div style={{ padding: 70 }}>
         <Grid item xs={12} className={classes.headline}>
-          <Grid container spacing={24} className={classes.root} justify="center">
-            <Typography variant="display1" align="center">
+          <Grid
+            container
+            spacing={24}
+            className={classes.root}
+            justify="center"
+          >
+            <Typography
+              variant="display1"
+              align="center"
+              className={classes.title}
+            >
               What would you like to do today?
             </Typography>
           </Grid>
-        </Grid>,
-
+        </Grid>
+        ,
         <div className="main-content-section">
           <Grid container spacing={24} className={classes.root}>
             <Grid item xs={12} sm={6} md={4} className={classes.headline}>
@@ -46,9 +59,7 @@ class Home extends Component {
                 My Health Log
               </Typography>
               <Subhead align="center">
-                <Link
-                  href="/log"
-                >
+                <Link href="/log">
                   <img src={report} alt="clipboard" />
                 </Link>
               </Subhead>
@@ -58,9 +69,7 @@ class Home extends Component {
                 My Journal
               </Typography>
               <Subhead align="center">
-                <Link
-                  href="/symptoms"
-                >
+                <Link href="/symptoms">
                   <img src={journal} alt="health journal" />
                 </Link>
               </Subhead>
@@ -70,15 +79,14 @@ class Home extends Component {
                 Charts
               </Typography>
               <Subhead align="center">
-                <Link
-                  href="/charts"
-                >
+                <Link href="/charts">
                   <img src={chart} alt="line graph" />
                 </Link>
               </Subhead>
             </Grid>
           </Grid>
-        </div>,
+        </div>
+        ,
       </div>,
     ];
   }

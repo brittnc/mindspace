@@ -1,16 +1,16 @@
 // Importing React since we are using React.
-import React from 'react';
+import React from "react";
 // Importing material-ui components and style.
-import Card, { CardContent } from 'material-ui/Card';
-import { withStyles } from 'material-ui/styles';
-import Typography from 'material-ui/Typography';
-import Button from 'material-ui/Button';
-import { Link } from 'react-router-dom';
-import { InputLabel } from 'material-ui/Input';
-import { FormControl } from 'material-ui/Form';
-import InputAdornment from 'material-ui/Input/InputAdornment';
-import Input from 'material-ui/Input';
-import IconButton from 'material-ui/IconButton';
+import Card, { CardContent } from "material-ui/Card";
+import { withStyles } from "material-ui/styles";
+import Typography from "material-ui/Typography";
+import Button from "material-ui/Button";
+import { Link } from "react-router-dom";
+import { InputLabel } from "material-ui/Input";
+import { FormControl } from "material-ui/Form";
+import InputAdornment from "material-ui/Input/InputAdornment";
+import Input from "material-ui/Input";
+import IconButton from "material-ui/IconButton";
 
 // Style
 const styles = (theme) => ({
@@ -19,12 +19,12 @@ const styles = (theme) => ({
   },
 
   root: {
-    display: 'flex',
-    flexWrap: 'wrap',
+    display: "flex",
+    flexWrap: "wrap",
     marginTop: theme.spacing.unit * 3,
-    borderStyle: 'solid',
+    borderStyle: "solid",
     borderWidth: 4,
-    borderColor: '#2F4858',
+    borderColor: "#2F4858",
   },
   formControl: {
     minWidth: 120,
@@ -33,24 +33,24 @@ const styles = (theme) => ({
   button: {
     marginTop: 40,
     padding: 15,
-    backgroundColor: '#0e5f76',
-    color: 'white',
+    backgroundColor: "#0e5f76",
+    color: "white",
   },
   signUpButton: {
     marginTop: 40,
     padding: 15,
-    backgroundColor: '#0e5f76',
-    color: 'white',
-    float: 'right',
+    backgroundColor: "#0e5f76",
+    color: "white",
+    float: "right",
   },
   formError: {
-    color: 'red',
+    color: "red",
   },
 });
 
 class LoginForm extends React.Component {
   state = {
-    password: '',
+    password: "",
     showPassword: false,
   };
 
@@ -78,8 +78,8 @@ class LoginForm extends React.Component {
               LOGIN
             </Typography>
             <Typography gutterBottom component="p" align="center">
-              Enter your HealthTracker credentials to LOG IN or click SIGN UP to
-              create an account.
+              Enter your credentials to LOG IN or click SIGN UP to create an
+              account.
             </Typography>
             <form noValidate autoComplete="off">
               <FormControl className={classes.formControl} fullWidth>
@@ -100,7 +100,7 @@ class LoginForm extends React.Component {
                 <InputLabel htmlFor="password">Password</InputLabel>
                 <Input
                   id="password"
-                  type={this.state.showPassword ? 'text' : 'password'}
+                  type={this.state.showPassword ? "text" : "password"}
                   value={this.props.password}
                   onChange={this.props.handlePasswordChange}
                   className={classes.textField}
@@ -133,7 +133,7 @@ class LoginForm extends React.Component {
                 variant="raised"
                 color="primary"
               >
-                {this.state.showPassword ? 'HIDE PASSWORD' : 'SHOW PASSWORD'}
+                {this.state.showPassword ? "HIDE PASSWORD" : "SHOW PASSWORD"}
               </Button>
               <br />
 

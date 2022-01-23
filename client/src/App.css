@@ -1,7 +1,7 @@
-  /* Color Scheme */
-  /* https://coolors.co/33658a-86bbd8-2f4858-f6ae2d-f26419*/
-  
-  /*Sticky footer*/
+/* Color Scheme */
+/* https://coolors.co/33658a-86bbd8-2f4858-f6ae2d-f26419*/
+
+/*Sticky footer*/
 .Site {
   /* display: flex; */
   min-height: 100vh;
@@ -18,7 +18,7 @@
 /* Color of site background */
 /* #03A9f4*/
 body {
-  background-color: #86BBD8;
+  background-image: url("./assets/images/space2.png");
 }
 
 /* Color of top navigation bar */
@@ -26,7 +26,7 @@ body {
 .appBar {
   background-color: #0e5f76 !important;
   padding-bottom: 10px;
-  border-bottom: 2px solid #2F4858;
+  border-bottom: 2px solid #2f4858;
 }
 
 /* Color of headers */
@@ -41,10 +41,6 @@ a {
 
 .footer {
   background-color: #0e5f76 !important;
-  color: 'white';
-  border-top: 2px solid #2F4858;
+  color: "white";
+  border-top: 2px solid #2f4858;
 }
-
-
-
-
