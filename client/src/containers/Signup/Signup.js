@@ -15,6 +15,9 @@ const styles = {
   headline: {
     marginTop: 30,
   },
+  welcome: {
+    color: "white"
+  }
 };
 
 class Signup extends Component {
@@ -139,7 +142,7 @@ class Signup extends Component {
             className={classes.root}
             justify="center"
           >
-            <Typography variant="display1">Welcome to MindSpace</Typography>
+            <Typography className={classes.welcome} variant="display1">Welcome to MindSpace</Typography>
           </Grid>
         </Grid>
         ,
