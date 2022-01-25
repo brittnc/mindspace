@@ -23,6 +23,7 @@ const styles = {
   typography: {
     htmlFontSize: 30,
     marginTop: 30,
+    color:"white"
   },
   root: {
     display: 'flex',

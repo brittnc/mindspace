@@ -39,6 +39,9 @@ const styles = (theme) => ({
     marginTop: 30,
     color: "white",
   },
+  chart: {
+    color: "white"
+  }
 });
 
 class Charts extends Component {
@@ -52,7 +55,7 @@ class Charts extends Component {
           <div style={{ padding: 70 }}>
             <Grid container spacing={24}>
               <Grid item xs={12}>
-                <Typography variant="display1" align="left">
+                <Typography className={classes.chart} variant="display1" align="left">
                   Charts
                 </Typography>
               </Grid>

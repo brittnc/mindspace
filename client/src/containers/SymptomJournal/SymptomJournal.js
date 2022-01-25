@@ -33,6 +33,9 @@ const styles = (theme) => ({
     backgroundImage: { bgImg },
     padding: theme.spacing.unit * 3,
   },
+  journal: {
+    color: "white"
+  }
 });
 
 class SymptomJournal extends Component {
@@ -161,7 +164,7 @@ class SymptomJournal extends Component {
           <div style={{ padding: 70 }}>
             <Grid container spacing={24}>
               <Grid item xs={12}>
-                <Typography variant="display1" align="left">
+                <Typography className={classes.journal} variant="display1" align="left">
                   My symptom journal
                 </Typography>
               </Grid>
